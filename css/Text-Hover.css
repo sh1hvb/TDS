@@ -5,25 +5,44 @@
     padding: 0;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: center ;
+    top: 50;
     align-items: center;
     font-family: 'Poppins', sans-serif;
     
     
 }
-
-h1{
+#logo {
+    position:static;
+    top: 0;
+    left: 0;
+    width: 50px; /* adjust as needed */
+    height: auto; /* keep aspect ratio */
+    background-image: url('/images/logo.jpg');
+    background-repeat: no-repeat;
     margin: 0;
-    padding: 0;
-    font-size: 10em;
-    line-height: 0.8em;
-   border: solid black;
-    border-radius: 20%;
-    background-color: transparent;
-    background-color: rgba(6, 88, 14, 0.8);
-    
     
 }
+
+
+
+h1{
+
+    margin:  0 ;
+    font-size: 10em;
+    line-height: 0.8em;
+    text-align: center;
+    display: flex;
+    opacity: 0.0 - 1.0;
+        background-color: rgba(128, 128, 128, 0.5);
+        padding: 10px;
+    }
+    
+    
+
+
+    
+
 
 h1 span{
     position: relative;
@@ -31,37 +50,13 @@ h1 span{
     display: block;
 }
 
-h1 span:nth-child(1)::before{
-    content: '';
-    position: absolute;
-    top: calc(50% - 15px);
-    right: 0;
-    width: 90px;
-    height: 48px;
-    background: rgb(255, 255, 255);
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: 0.5s;
-    z-index: 1 ;
-}
+
 
 h1:hover span:nth-child(1)::before{
     transform: scaleX(1);
 }
 
-h1 span:nth-child(2)::before{
-    content: '';
-    position: absolute;
-    top: calc(50% - 15px);
-    left: 0;
-    width: 90%;
-    height: 48px;
-    background: rgb(255, 255, 255);
-    transform-origin: left;
-    transform: scaleX(0);
-    transition: 0.5s;
-    z-index: 1 ;
-}
+
 
 h1:hover span:nth-child(2)::before{
     transform: scaleX(1);
@@ -73,9 +68,9 @@ h1 span hide{
 }
 
 h1:hover span hide{
-    color: rgb(142, 0, 135);
+   
     transition-delay: 0.5s;
-    opacity: 0;
+
 }
 
 h1:hover span:nth-child(1) hide{
